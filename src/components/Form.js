@@ -15,7 +15,7 @@ const Form = () => {
 
   const validateValues = (inputValues) => {
       let errors = {};
-      const passwordPattern = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+      const passwordPattern = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
       if (!inputValues.username ) {
       errors.username = "Username is required";
       } else errors.username = "";
