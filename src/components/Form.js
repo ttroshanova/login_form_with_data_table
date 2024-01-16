@@ -23,7 +23,7 @@ const Form = () => {
       errors.password = "Password is required";
       }
       else if (!passwordPattern.test(inputValues.password)) {
-      errors.password = "Password must contain at least 8 characters, 1 number, 1 letter, 1 symbol.";
+      errors.password = "Password must contain at least 8 characters, 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character.";
       } else errors.password = "";
       return errors;
   };
