@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback, useRef } from 'react'
+import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { HiExclamationCircle } from "react-icons/hi2";
 import UserContext from './UserContext'
@@ -34,7 +34,7 @@ const Form = () => {
   }
 
   const navigateTable = async () => {
-    if(errors.username == '' && errors.password == '' && inputFields.username !== '' && inputFields.password !== ''){
+    if(errors.username === '' && errors.password === '' && inputFields.username !== '' && inputFields.password !== ''){
       navigate('/table')
       await fetchData()
     } 

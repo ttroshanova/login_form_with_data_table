@@ -6,6 +6,7 @@ export const ContextProvider = ({children}) => {
 
     const [people, setPeople] = useState([]);
     const [columnsData, setColumnsData] = useState({headers: [], body: []})
+    
     const columns = (results) => {
         console.log(results)
         const columnsData = [];
