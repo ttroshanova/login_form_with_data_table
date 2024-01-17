@@ -5,7 +5,7 @@ const UserContext = createContext();
 export const ContextProvider = ({children}) => {
 
     const [people, setPeople] = useState([]);
-    const [columnsData, setColumnsData] = useState({headers: [], body: []})
+    const [tableData, setColumnsData] = useState({headers: [], body: []})
     
     const columns = (results) => {
         console.log(results)
@@ -50,7 +50,7 @@ export const ContextProvider = ({children}) => {
     }
 
     return (
-        <UserContext.Provider value={{ columns, fetchData, columnsData }}>
+        <UserContext.Provider value={{ columns, fetchData, tableData }}>
             {children}
         </UserContext.Provider>
     )
