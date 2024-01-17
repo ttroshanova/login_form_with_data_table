@@ -16,7 +16,7 @@ const Form = () => {
   const validateValues = (inputValues) => {
       let errors = {};
       const passwordPattern = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-      if (!inputValues.username ) {
+      if (!inputValues.username) {
       errors.username = "Username is required";
       } else errors.username = "";
       if (!inputValues.password.length) {
@@ -56,14 +56,14 @@ const Form = () => {
         <input type='name' name='username' value={inputFields.username} placeholder='username' onChange={handleChange}/>
         {
         <div className={(errors.username && errorsVisibility) ? 'error-details visible' : 'error-details'}>
-            <span><HiExclamationCircle /></span>
+            <span><HiExclamationCircle/></span>
             <p>{errors.username}</p>
         </div>
         }
         <input type='password' name='password' value={inputFields.password} placeholder='password' onChange={handleChange}/>
         {
         <div className={(errors.password && errorsVisibility) ? 'error-details visible' : 'error-details'}>
-            <span><HiExclamationCircle /></span>
+            <span><HiExclamationCircle/></span>
             <p>{errors.password}</p>
         </div>
         }

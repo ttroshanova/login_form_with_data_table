@@ -43,16 +43,15 @@ input {
 }
 
 .error-details {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     width: 100%;
     color: rgb(255, 255, 255);
-    visibility: hidden;
 }
 
 .error-details.visible {
-    visibility: visible;
+    display: flex;
 }
 
 .error-details span svg {
