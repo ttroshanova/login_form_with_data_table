@@ -36,7 +36,11 @@ const Form = () => {
   const navigateTable = async () => {
     if(errors.username === '' && errors.password === '' && inputFields.username !== '' && inputFields.password !== ''){
       navigate('/table')
-      await fetchData()
+      try {
+        await fetchData()
+      } catch(err) {
+        console.error(err)
+      }
     } 
   }
 
